@@ -7,7 +7,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api.Data
 {
-    public class ApplicationDbContext : IdentityDbContext <AppUser>
+    // public class ApplicationDbContext : IdentityDbContext <AppUser>
+    public class ApplicationDbContext 
     { 
         public ApplicationDbContext(DbContextOptions dbContextOptions)
         :base(dbContextOptions)
@@ -47,20 +48,20 @@ namespace api.Data
             // clave externa en la tabla Reservas que apunta a la tabla relacionada ReservaImplementos.
             .HasForeignKey( x => x.ReservaInstalacionesId);
 
-            LIST<IdentityRole> roles = new LIST<IdentityRole>
-            {
-                new IdentityRole
-                {
-                    Name = "Admin",
-                    NormalizedName = "ADMIN"
-                },
-                 new IdentityRole
-                {
-                    Name = "User",
-                    NormalizedName = "USER"
-                },
-            };
-            builder.Entity<IdentityRole>().HasData(roles);
+            // LIST<IdentityRole> roles = new LIST<IdentityRole>
+            // {
+            //     new IdentityRole
+            //     {
+            //         Name = "Admin",
+            //         NormalizedName = "ADMIN"
+            //     },
+            //      new IdentityRole
+            //     {
+            //         Name = "User",
+            //         NormalizedName = "USER"
+            //     },
+            // };
+            // builder.Entity<IdentityRole>().HasData(roles);
         }
     }
 }
