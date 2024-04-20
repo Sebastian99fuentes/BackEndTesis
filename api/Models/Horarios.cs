@@ -10,6 +10,10 @@ namespace api.Models
     {
          public int Id { get; set; } 
          public int Dia { get; set; }
+
+         public int? InstalacionesId { get; set; }
+         public Instalaciones? Instalaciones { get; set; }
+
         public List<Horas> Hora {get; set;} = new List<Horas>();
 
     }

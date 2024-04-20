@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace api.Models
+namespace api.Controllers.HorasController.Data.Dtos
 {
-     [Table("Horas")]
-    public class Horas
+    public class HoraDto
     {
         public int Id { get; set; } 
         
@@ -15,8 +14,5 @@ namespace api.Models
         public bool  Status {get; set;} = false;
 
         public int? HorariosId { get; set; }
-        public Horarios? Horarios { get; set; }
-
-
     }
 }

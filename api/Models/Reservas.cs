@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace api.Models
 {
+     [Table("Reservas")]
     public class Reservas
     {
              public string AppUserId { get; set; }
