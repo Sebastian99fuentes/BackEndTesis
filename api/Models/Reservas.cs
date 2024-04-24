@@ -16,10 +16,9 @@ namespace api.Models
 
              public AppUser AppUser {get; set;}
 
-             public ReservaImplementos ReservaImplementos {get; set;}
+             public ReservaImplementos? ReservaImplementos {get; set;}
 
              public ReservaInstalaciones ReservaInstalaciones {get; set;}
-
 
     }
 }

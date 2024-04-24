@@ -14,7 +14,7 @@ namespace api.Models
          public int? InstalacionesId { get; set; }
          public Instalaciones? Instalaciones { get; set; }
 
-        public List<Horas> Hora {get; set;} = new List<Horas>();
+        public List<Horas> Horarios {get; set;} = new List<Horas>();
 
     }
 }

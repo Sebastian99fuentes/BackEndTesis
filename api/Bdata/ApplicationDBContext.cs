@@ -19,8 +19,8 @@ namespace api.Bdata
 
         public DbSet<Horarios> Horarios { get; set; }
         public DbSet<Horas> Comments { get; set; }
-        public DbSet<ReservaImplementos> ReservaImplementos { get; set; }
-        public DbSet<ReservaInstalaciones> ReservaInstalaciones { get; set; }
+        public DbSet<Implementos> Implementos { get; set; }
+        public DbSet<Instalaciones> Instalaciones { get; set; }
         public DbSet<Reservas> Reservas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace api.Models
+namespace api.Controllers.InstalacionesController.Data.Dtos
 {
-    [Table("Instalaciones")]
-    public class Instalaciones
+    public class InstalacionDto
     {
         public int Id { get; set; } 
 
         public  string nombreInstalacion {get; set;};
           
-        public List<Horarios> Horarios { get; set; } = new List<Horarios>();
+        public List<Horarios> Horarios { get; set; };
     }
 }

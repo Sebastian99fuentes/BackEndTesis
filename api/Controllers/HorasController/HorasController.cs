@@ -63,12 +63,12 @@ namespace api.Controllers
             //  await _context.SaveChangesAsync();
             // return CreatedAtAction(nameof(GetById), new {id = HoraModel.Id}, HoraModel.ToHoras());
 
-        //     if(!ModelState.IsValid)
-        //         return BadRequest(ModelState);
+            if(!ModelState.IsValid)
+                return BadRequest(ModelState);
                 
             var HoraModel = HoraDto.ToHorasFromCreateDto();
            await _horasRepo.CreateAsync(HoraModel);
-            return CreatedAtAction(nameof(GetById), new {id = HoraModel.Id}, HoraModel.ToHoras());
+            return CreatedAtAction(nameof(GetById), new {id = HoraModel.Id}, HoraModel.ToHorastDto());
         }  
 
         [HttpPut]
@@ -86,8 +86,8 @@ namespace api.Controllers
         //    await _context.SaveChangesAsync();
         //     return Ok(HoraModel.ToHorastDto());
 
-            //  if(!ModelState.IsValid)
-            //     return BadRequest(ModelState);
+             if(!ModelState.IsValid)
+                return BadRequest(ModelState);
                 
             var HoraModel = await _horasRepo.UpdateAsync(id, updateDto); 
              if (HoraModel == null)
